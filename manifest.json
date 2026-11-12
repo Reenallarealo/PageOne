@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "PageOne",
+  "version": "1.2.0",
+  "description": "极简新标签页：搜索框靠上，提交后打开 Google，并跟随系统明暗主题。",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pageone@pageone.local",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "required": ["searchTerms"]
+      }
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "host_permissions": [
+    "https://suggestqueries.google.com/*"
+  ]
+}
